@@ -12,7 +12,6 @@ filename = 'something'
 
 def pdf2img():
     i = 0
-    # print(filename)
     try:
         os.chdir(sys._MEIPASS) 
         images = convert_from_path(filename,poppler_path='binary')
@@ -54,29 +53,29 @@ window.config(background="white")
 
 # Create a Converter Label
 label_file_explorer = Label(window,
-                            text="PDF to Image Converter using Tkinter",
-                            width=100, height=4,
+                            text="PDF to Image Converter using Python <3",
+                            width=75, height=10,
                             fg="blue")
 
 
 button_explore = Button(window,
-                        text="Browse Files",
+                        text="Browse Files for PDF",
                         command=browseFiles)
 
 button_convert = Button(window,
                         text="Convert PDF",
-                        command=pdf2img)
+                        command=pdf2img, height=5, width=20, bg="#745ead", fg="white")
 
 
 button_exit = Button(window,
                      text="Exit",
-                     command=exit)
+                     command=exit, width=10, bg="#cc4141")
 
 label_file_explorer.grid(column=1, row=1)
 
-button_explore.grid(column=1, row=3)
+button_explore.grid(column=1, row=3,pady=10)
 
-button_convert.grid(column=1, row=5)#convert button pos
+button_convert.grid(column=1, row=5,pady=10)#convert button pos
 
 button_exit.grid(column=1, row=7)
 
