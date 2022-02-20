@@ -10,28 +10,11 @@ from sys import exit
 
 filename = 'something'
 
-# def resource_path(relative_path):
-# 	try:
-# 		base_path = sys._MEIPASS
-# 	except Exception:
-# 		base_path = os.path.dirname(__file__)
-# 	return os.path.join(base_path, relative_path)
-
-# path = "C:/Users/Test/Desktop/sample.pdf"
-
-# images = convert_from_path(path, poppler_path = poppler)
-
 def pdf2img():
     i = 0
     # print(filename)
     try:
-        # poppler = r'C:\Users\debapam\Desktop\Self_Development\PyProjs\pdf2imageconverter\poppler-22.01.0\Library\bin'
-        # print(poppler)
-        # poppler=resource_path('\\binary')
-        # print(poppler)
         os.chdir(sys._MEIPASS) 
-        # data_path= '\\binary'
-        # images = convert_from_path(filename,poppler_path='binary')
         images = convert_from_path(filename,poppler_path='binary')
 
         for img in images:
