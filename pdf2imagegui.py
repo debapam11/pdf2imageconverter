@@ -29,7 +29,7 @@ def pdf2img():
         # print(poppler)
         # poppler=resource_path('\\binary')
         # print(poppler)
-        # os.chdir(sys._MEIPASS) 
+        os.chdir(sys._MEIPASS) 
         # data_path= '\\binary'
         # images = convert_from_path(filename,poppler_path='binary')
         images = convert_from_path(filename,poppler_path='binary')
