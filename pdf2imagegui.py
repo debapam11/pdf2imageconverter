@@ -35,7 +35,7 @@ def pdf2img():
         images = convert_from_path(filename,poppler_path='binary')
 
         for img in images:
-            img.save('page'+str(i)+'.jpg', 'JPEG')
+            img.save(os.path.dirname(filename)+'\page'+str(i)+'.jpg', 'JPEG')
             i += 1
     except Exception as e:
         Result = str(e)
