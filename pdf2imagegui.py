@@ -11,17 +11,17 @@ from sys import exit
 filename = 'something'
 
 def pdf2img():
-    i = 0
+    i = 1
     try:
         os.chdir(sys._MEIPASS) 
         images = convert_from_path(filename,poppler_path='binary')
 
         for img in images:
-            img.save(os.path.dirname(filename)+'\page'+str(i)+'.jpg', 'JPEG')
+            img.save(os.path.dirname(filename)+'\\'+os.path.splitext(os.path.basename(filename))[0]+str(i)+'.jpg', 'JPEG')
             i += 1
     except Exception as e:
-        Result = str(e)
-        messagebox.showinfo("Result", e)
+        Result = "No PDF selected/Some Error Occured"
+        messagebox.showinfo("Result", Result)
 
     else:
         Result = "Success. Check in the same folder."
@@ -57,9 +57,9 @@ label_file_explorer = Label(window,
                             width=75, height=10,
                             fg="blue")
 
-
+#select files button
 button_explore = Button(window,
-                        text="Browse Files for PDF",
+                        text="Browse Files",
                         command=browseFiles)
 
 button_convert = Button(window,
