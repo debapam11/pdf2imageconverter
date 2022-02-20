@@ -82,4 +82,3 @@ button_exit.grid(column=1, row=7)
 
 
 window.mainloop()
-
